@@ -1,0 +1,1 @@
+#Junwoo : I will work on the final grade determination portion of the front end. I will also learn the basics of web dev (html/css/javascript)
