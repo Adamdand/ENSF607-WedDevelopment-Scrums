@@ -4,6 +4,23 @@ import './App.css';
 import * as ReactBootStrap from "react-bootstrap";
 import { useReducer, useState } from 'react';
 
+function addOutComeBtn(){
+  alert("learning outcome ADDED!")
+}
+
+function deleteOutComeBtn(){
+  alert("learning outcome DELETED!")
+}
+
+class outcome{
+  return;
+  handleSubmit = (event) =>{
+    return;
+  }
+}
+
+
+
 const App = () => {
   const LearningOutComes = [
     {number: "1", description: "Have a deep understanding, and practical knowledge of objects oriented analysis, design and development."},
@@ -19,12 +36,14 @@ const App = () => {
       <td>{LearningOutComes.description}</td>
     </tr>
     )
-  }
+  };
+
   return (
     <div className="App">
         <ReactBootStrap.Table striped bordered hover>
   <thead>
   <b>2. Learning Outcomes</b>
+  <tr>At the end of this course, you will be able to:</tr>
     <tr>
       <th>Number</th>
       <th>Description</th>
@@ -35,7 +54,25 @@ const App = () => {
 
   </tbody>
   </ReactBootStrap.Table>
+  <div>
+    <h1>New Learning Outcome Input:</h1>
+    <input
+                       className="input"
+                       type="text"
+                       placeholder="Input new learning outcomecout"
+                       //value={inputValue}
+                       //onChange={(e) => setInputValue(e.target.value)}
+                       //onKeyDown={handleKeyDown}
+                       />
+      <button onClick={addOutComeBtn}>
+        Add Learning Outcome
+      </button>
+      <button onClick={deleteOutComeBtn}>
+        Delete Learning Outcome
+      </button>
     </div>
+    </div>
+    
   );
 }
 
