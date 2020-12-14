@@ -1,72 +1,41 @@
 import 'bulma/css/bulma.css';
+import React from 'react';
+import './App.css';
+import * as ReactBootStrap from "react-bootstrap";
 import { useReducer, useState } from 'react';
 
-function App() {
+const App = () => {
+  const LearningOutComes = [
+    {number: "1", description: "Have a deep understanding, and practical knowledge of objects oriented analysis, design and development."},
+    {number: "2", description: "Design and develop software programs in java"},
+    {number: "3", description: "Design and Develop client-server applications"},
+    {number: "4", description: "Use different design and development utilities and tools."},
+  ]
 
-  // const [counter, setCounter] = useState(0);
-
-  const myReducer = (state, action) => {
-    if(isNaN(action.value)) return 0;
-    return action.value > 100 ? 100 : action.value < 0 ? 0 : action.value;
-  };
-
-  const [counter, dispatch] = useReducer(myReducer, 0);
-  const [inputValue, setInputValue] = useState("");
-
-  const decrement = () => {
-    dispatch({ value : counter - 1 });
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key == "Enter") {
-      dispatch({value: parseInt(inputValue)});
-    }
-  };
-
+  const renderLearningOutComes = (LearningOutComes, index) =>{
+    return(
+    <tr key={index}>
+      <td>{index}</td>
+      <td>{LearningOutComes.description}</td>
+    </tr>
+    )
+  }
   return (
     <div className="App">
-      <div className="container">
-        <div className="columns is-multline">
-          <div className="column is-full">
-            <div className="notification">
-              <div className="columns">
-                <div className="column is-half">
-                  <div className="field has-addons">
-                    <div className="control">
-                      <input
-                       className="input"
-                       type="text"
-                       placeholder="Put a number"
-                       value={inputValue}
-                       onChange={(e) => setInputValue(e.target.value)}
-                       onKeyDown={handleKeyDown}
-                       />
-                    </div>
-                    <div className="control">
-                      <a className="button is-info"
-                       onClick={() => 
-                        dispatch( { value: parseInt(inputValue) })
-                       }>Assign</a>
-                    </div>
-                </div>
-                <div className="button has-addons">
-                  <button className="button is-primary"
-                    onClick={() => dispatch({ value: counter + 1 })
-                    }>Up</button>
-                  <button className="button is warning" onClick={decrement}>
-                      Down
-                  </button>
-                </div>
-              </div>
-              <div className="column is-half-has-text-centered">
-                <h1 className="title">{counter}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <ReactBootStrap.Table striped bordered hover>
+  <thead>
+  <b>2. Learning Outcomes</b>
+    <tr>
+      <th>Number</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {LearningOutComes.map(renderLearningOutComes)}
+
+  </tbody>
+  </ReactBootStrap.Table>
     </div>
-  </div>
   );
 }
 
