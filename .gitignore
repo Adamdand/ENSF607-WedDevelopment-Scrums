@@ -1,2 +1,5 @@
 # ds stores
 .DS_Store
+
+# es lint caches
+.eslintcache
