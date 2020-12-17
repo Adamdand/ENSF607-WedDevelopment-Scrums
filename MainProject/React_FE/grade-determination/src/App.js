@@ -8,6 +8,9 @@ function App() {
   const [learningInput, setLearningInput] = useState("");
   const [weightInput, setWeightInput] = useState("");
 
+  const [gradeInput, setGradeInput] = useState("");
+  const [gradeMinInput, setGradeMinInput] = useState("");
+
   function myCreateFunction() {
     var table = document.getElementById("myTable");
     var row = table.insertRow(0);
@@ -30,6 +33,12 @@ function App() {
     }
 
     sumTable.innerHTML = sum;
+  }
+
+  function updateGrade() {
+    var element = document.getElementById(gradeInput);
+    
+    element.innerHTML = gradeMinInput;
   }
 
   document.addEventListener("DOMContentLoaded", function (e) {
@@ -77,25 +86,6 @@ function App() {
 
         </tbody>
       </table>
-
-
-
-      {/* <div class="field has-addons">
-        <p class="control">
-          <input class="input" type="text" placeholder="Component" />
-          <input class="input" type="text" placeholder="Learning Outcome(s)" />
-          <input class="input" type="text" placeholder="Weight" />
-        </p>
-        <p class="control">
-          <a class="button is-info">
-            Add
-          </a>
-
-          <a class="button is-info">
-            Delete
-          </a>
-        </p>
-      </div> */}
 
       <div class="field has-addons">
         <p class="control">
@@ -149,8 +139,108 @@ function App() {
         </p>
       </div>
 
+      <table className="table" id="grades">
+        <thead>
+          <th>Letter Grade</th>
+          <th>Minimum Grade</th>
+        </thead>
 
+        <tbody>
+          <tr>
+            <td>A+</td>
+            <td id="A+">95</td>
+          </tr>
 
+          <tr>
+            <td>A</td>
+            <td id="A">90</td>
+          </tr>
+
+          <tr>
+            <td>A-</td>
+            <td id="A-">85</td>
+          </tr>
+
+          <tr>
+            <td>B+</td>
+            <td id="B+">80</td>
+          </tr>
+
+          <tr>
+            <td>B</td>
+            <td id="B">75</td>
+          </tr>
+
+          <tr>
+            <td>B-</td>
+            <td id="B-">70</td>
+          </tr>
+
+          <tr>
+            <td>C+</td>
+            <td id="C+">65</td>
+          </tr>
+
+          <tr>
+            <td>C</td>
+            <td id="C">60</td>
+          </tr>
+
+          <tr>
+            <td>C-</td>
+            <td id="C-">55</td>
+          </tr>
+
+          <tr>
+            <td>D+</td>
+            <td id="D+">50</td>
+          </tr>
+
+          <tr>
+            <td>D</td>
+            <td id="D">45</td>
+          </tr>
+
+          <tr>
+            <td>F</td>
+            <td id="F">40</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input"
+            type="text"
+            placeholder="Letter Grade"
+            value={gradeInput}
+            onChange={(e) => setGradeInput(e.target.value)}
+          />
+        </p>
+      </div>
+
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input"
+            type="text"
+            placeholder="Minimum Grade"
+            value={gradeMinInput}
+            onChange={(e) => setGradeMinInput(e.target.value)}
+          />
+        </p>
+      </div>
+
+      <div class="field is-grouped">
+        <p class="control">
+          <a class="button is-primary"
+            onClick={updateGrade}
+            href="/#"
+          >
+            Update Grade
+          </a>
+        </p>
+      </div>
 
     </div>
   );
