@@ -1,3 +1,3 @@
 
-#Need to gain some initial knowledge on html and java script befoer we begin diving in
-#Initial set up of React File
+# Our code is smelly - would be nice to split code into seperate documents
+# CSS overlay would be nice, we plan on researching/taking a course over winter break - work on formatting
