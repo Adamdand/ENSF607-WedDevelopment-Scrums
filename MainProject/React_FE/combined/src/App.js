@@ -219,7 +219,7 @@ function App() {
       <div class="field is-grouped">
         <p class="control">
           <a class="button is-primary"
-            onClick={createLearningOutcomesFunction}
+            onClick={(e) =>createLearningOutcomesFunction (e.preventDefault())}
             href="/#"
           >
             Add
@@ -227,7 +227,7 @@ function App() {
         </p>
         <p class="control">
           <a class="button is-light"
-            onClick={deleteLearningOutcome}
+            onClick={(e) =>deleteLearningOutcome(e.preventDefault())}
             href="/#"
           >
             Delete
@@ -297,7 +297,7 @@ function App() {
       <div class="field is-grouped">
         <p class="control">
           <a class="button is-primary"
-            onClick={createGraduateOutcomesFunction}
+            onClick={(e) => createGraduateOutcomesFunction(e.preventDefault())}
             href="/#"
           >
             Add
@@ -305,7 +305,7 @@ function App() {
         </p>
         <p class="control">
           <a class="button is-light"
-            onClick={deleteGraduateOutcome}
+            onClick={(e) => deleteGraduateOutcome(e.preventDefault())}
             href="/#"
           >
             Delete
@@ -387,7 +387,7 @@ function App() {
       <div class="field is-grouped">
         <p class="control">
           <a class="button is-primary"
-            onClick={myCreateFunction}
+            onClick={(e) => myCreateFunction(e.preventDefault())}
             href="/#"
           >
             Add
@@ -395,7 +395,7 @@ function App() {
         </p>
         <p class="control">
           <a class="button is-light"
-            onClick={myDeleteFunction}
+            onClick={(e) => myDeleteFunction(e.preventDefault())}
             href="/#"
           >
             Delete
@@ -498,7 +498,7 @@ function App() {
       <div class="field is-grouped">
         <p class="control">
           <a class="button is-primary"
-            onClick={updateGrade}
+            onClick={(e) => updateGrade (e.preventDefault())}
             href="/#"
           >
             Update Grade
@@ -506,18 +506,7 @@ function App() {
         </p>
       </div>
 
-
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <div class="buttons">
-          <button class="button is-success">Save changes</button>
-          <button class="button is-info">Save and continue</button>
-          <button class="button is-danger">Cancel</button>
-        </div>
-      </div>
+      
 
     </div>
 
