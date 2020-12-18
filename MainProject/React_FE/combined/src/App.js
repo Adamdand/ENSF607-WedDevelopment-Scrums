@@ -1,6 +1,7 @@
 import './App.css';
 import 'bulma/css/bulma.css'
 import { useState } from "react";
+import logo from './Schulich.png'
 
 function App() {
 
@@ -99,6 +100,77 @@ function App() {
   return (
     <div className="App">
 
+      <div className="tile is-ancestor">
+        <div className="tile is-4 is-vertical is-parent">
+          <div className="tile is-child box">
+            <p className="title">Course Information</p>
+          </div>
+          {/* <div class="tile is-child box">
+            <p class="title">Two</p>
+          </div> */}
+        </div>
+        <div className="tile is-parent">
+          <div className="tile is-child box">
+            <p className="title">
+              <img src={logo} alt=""/>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="field">
+        <label className="label">Course Subject</label>
+        <p className="help">(ex. ENSF)</p>
+        <div className="control">
+          <input className="input" type="text" placeholder="Subject" />
+        </div>
+
+        <label className="label">Course Code</label>
+        <p className="help">(ex. 607)</p>
+        <div className="control">
+          <input className="input" type="text" placeholder="Code" />
+        </div>
+
+        <label className="label">Course Name</label>
+        <p className="help">(ex. Software Design and Architecture)</p>
+        <div className="control">
+          <input className="input" type="text" placeholder="Name" />
+        </div>
+
+      </div>
+
+      <div className="field">
+        <div className="control">
+          <textarea className="textarea is-primary" placeholder="Course Description/Overview"></textarea>
+        </div>
+      </div>
+
+
+      <div className="field">
+        <label className="label">Course Hours</label>
+        <p className="help">(ex. 3 units; H(3-2))</p>
+        <div className="control">
+          <input className="input" type="text" placeholder="Course Hours" />
+        </div>
+
+        <label className="label">Academic Credit</label>
+        <p className="help">(ex. 3)</p>
+        <div className="control">
+          <input className="input" type="text" placeholder="Academic Credit" />
+        </div>
+
+        <label className="label">Calendar Reference</label>
+        <p className="help">(ex. Software Design and Architecture)</p>
+        <div className="control">
+          <input className="input" type="text" placeholder="Enter Link Here" />
+        </div>
+
+      </div>
+
+
+      <ColoredLine color="grey" />
+
 <table className="Number" id="LearningOutcomes">
         <thead>
           <th>Number</th>
@@ -163,7 +235,6 @@ function App() {
         </p>
       </div>
 
-      <ColoredLine color="grey" />
 
 <table className="Number" id="LearningOutcomes2">
         <thead>
@@ -242,7 +313,7 @@ function App() {
         </p>
       </div>
 
-      <ColoredLine color="red" />
+      <ColoredLine color="grey" />
 
 
       <table className="table" id="myTable">
@@ -435,7 +506,23 @@ function App() {
         </p>
       </div>
 
+
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <div class="buttons">
+          <button class="button is-success">Save changes</button>
+          <button class="button is-info">Save and continue</button>
+          <button class="button is-danger">Cancel</button>
+        </div>
+      </div>
+
     </div>
+
+
+
   );
 }
 
