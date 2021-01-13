@@ -6,7 +6,7 @@
  import '../../App.css';
  
 
- class LearningOutcomes extends Component {
+ class GradeOutcomes extends Component {
 
   
    constructor(props) {
@@ -26,7 +26,7 @@
    }
    refreshList = () => {
      axios
-       .get("/api/todos/")
+       .get("/api/grades/")
        .then(res => this.setState({ todoList: res.data }))
        .catch(err => console.log(err));
    };
@@ -101,17 +101,17 @@
      if (item.id) {
        const axios = require("axios");
        axios
-         .put(`/api/todos/${item.id}/`, item)
+         .put(`/api/grades/${item.id}/`, item)
          .then(res => this.refreshList());
        return;
      }
      axios
-       .post(`/api/todos/`, item)
+       .post(`/api/grades/`, item)
        .then(res => this.refreshList());
    };
    handleDelete = item => {
      axios
-       .delete(`/api/todos/${item.id}/`, item)
+       .delete(`/api/grades/${item.id}/`, item)
        .then(res => this.refreshList());
    };
    createItem = () => {
@@ -161,4 +161,4 @@
      );
    }
  }
- export default LearningOutcomes;
+ export default GradeOutcomes;

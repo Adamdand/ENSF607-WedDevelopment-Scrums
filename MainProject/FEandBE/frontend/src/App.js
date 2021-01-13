@@ -2,7 +2,7 @@
  import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  import React, { Component } from "react";
  import LearningOutcomes from "./components/learningOutcomes/LearningOutcomes"
- import GradeOutcomes from "./components/grades/LearningOutcomes";
+ import GradeOutcomes from "./components/grades/GradeOutcomes";
  import './App.css';
  
 

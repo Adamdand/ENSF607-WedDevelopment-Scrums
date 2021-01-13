@@ -38,7 +38,7 @@
              <FormGroup>
                <Label for="title">Graduate Attribute</Label>
                <Input
-                 type="textArea"
+                 type="text"
                  name="title"
                  value={this.state.activeItem.title}
                  onChange={this.handleChange}
