@@ -1,14 +1,18 @@
  // frontend/src/App.js
  import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  import React, { Component } from "react";
- import LearningOutcomes from "./components/LearningOutcomes"
+ import LearningOutcomes from "./components/learningOutcomes/LearningOutcomes"
+ import GradeOutcomes from "./components/grades/LearningOutcomes";
  import './App.css';
  
 
  class App extends Component {
    render() {
      return (
-       <LearningOutcomes></LearningOutcomes>
+       <div>
+         <LearningOutcomes></LearningOutcomes>
+         <GradeOutcomes></GradeOutcomes>
+       </div>
      );
    }
   }
