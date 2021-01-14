@@ -7,22 +7,17 @@
  import Instructors from "./components/instructors/Instructors";
  import GradesTable from "./components/gradesTable/GradeTable";
  import './App.css';
- import Form from "./components/calendarInfo/Form";
+ 
 
  class App extends Component {
    render() {
      return (
        <div>
-         <Form></Form>
          <LearningOutcomes></LearningOutcomes>
-<<<<<<< HEAD
-         {/* <GradeOutcomes></GradeOutcomes> */}
-=======
          <TimeTable></TimeTable>
          <Instructors></Instructors>
          <GradeOutcomes></GradeOutcomes>
          <GradesTable></GradesTable>
->>>>>>> e4887614af6ce08b0012675cd894f70df6e58285
        </div>
      );
    }

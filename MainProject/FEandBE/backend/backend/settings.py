@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'corsheaders',            # add this
     'rest_framework',         # add this 
     'todo',
+    'timetable',
+    'instructor',
   ]
 
 
