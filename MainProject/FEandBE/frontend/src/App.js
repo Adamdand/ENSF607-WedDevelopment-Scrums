@@ -6,13 +6,15 @@
  import TimeTable from "./components/timetables/TimeTable";
  import Instructors from "./components/instructors/Instructors";
  import GradesTable from "./components/gradesTable/GradeTable";
+ import Form from './components/calendarInfo/Form';
  import './App.css';
 
- 
+
  class App extends Component {
    render() {
      return (
        <div>
+         <Form></Form>
          <LearningOutcomes></LearningOutcomes>
          <TimeTable></TimeTable>
          <Instructors></Instructors>
