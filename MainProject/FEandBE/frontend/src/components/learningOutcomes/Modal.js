@@ -36,23 +36,13 @@
          <ModalBody>
            <Form>
              <FormGroup>
-               <Label for="title">Graduate Attribute</Label>
-               <Input
-                 type="textArea"
-                 name="title"
-                 value={this.state.activeItem.title}
-                 onChange={this.handleChange}
-                 placeholder="Enter Graduate Attribute"
-               />
-             </FormGroup>
-             <FormGroup>
-               <Label for="description">Instruction Level</Label>
+               <Label for="description">Learning Outcome</Label>
                <Input
                  type="text"
                  name="description"
                  value={this.state.activeItem.description}
                  onChange={this.handleChange}
-                 placeholder="Enter Instruction Level"
+                 placeholder="Enter Learning Outcome"
                />
              </FormGroup>
            </Form>

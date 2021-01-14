@@ -14,7 +14,6 @@
      this.state = {
        viewCompleted: false,
        activeItem: {
-         title: "",
          description: "",
          completed: false
        },
@@ -74,7 +73,6 @@
       <div class = "content-section container">
          <div class="edj-row">
          <span class="edj-date date">{i++}</span> 
-         <span class="learning-item LearningTable">{item.title}</span> 
           <span class="learning-item LearningTable">{item.description}</span>
 
           <span class="learning-item LearningTable">
@@ -132,7 +130,7 @@
              <div class = "content-section container">
          <div class="learning-row">
            <h4>
-              <span class = "learning-item LearningTable">Graduate Attribute</span> <span class ="learning-item LearningTable">Instruction Level</span> <span class = "learning-item LearningTable">      </span>
+              <span class = "learning-item LearningTable">learning Outcomes</span> <span class = "learning-item LearningTable">      </span>
               </h4>
               </div>
             </div>
