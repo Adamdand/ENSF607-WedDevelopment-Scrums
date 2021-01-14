@@ -20,6 +20,8 @@
          <Instructors></Instructors>
          <GradeOutcomes></GradeOutcomes>
          <GradesTable></GradesTable>
+
+         
        </div>
      );
    }
