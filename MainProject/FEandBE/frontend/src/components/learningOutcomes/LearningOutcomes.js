@@ -134,7 +134,6 @@
               </h4>
               </div>
             </div>
-
                {this.renderTabList()}
                <ul className="list-group list-group-flush">
                  {this.renderItems()}
