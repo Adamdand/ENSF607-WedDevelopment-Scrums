@@ -3,47 +3,33 @@
  import React, { Component } from "react";
  import Modal from "./Modal";
  import axios from "axios";
- import '../../App.css';
+ import '../../TimeTable.css';
  
-const httpLoc = '/api/grades';
 
  class GradeOutcomes extends Component {
 
-    
-
+  
    constructor(props) {
      super(props);
      this.state = {
        viewCompleted: false,
        activeItem: {
-         component: "",
-         outcomes: "",
-         weight: false
+         section: "",
+         daysOfWeek: "",
+         time: "",
+         location: "",
+
        },
-       todoList: [],
-       totalWeight: ""
+       todoList: []
      };
    }
    componentDidMount() {
      this.refreshList();
-    //  this.calcTotal();
    }
-  //  calcTotal = () => {
-  //   const newItems = this.state.todoList
-  //   console.log(newItems);
-  //   let total = 0;
-    
-  //   newItems.map(item => {
-  //     console.log(item.weight);
-  //     total += parseInt(item.weight);
-  //   });
-  //   this.setState({totalWeight: total});
-  //  }
-
    refreshList = () => {
      axios
-       .get(`${httpLoc}`)
-       .then(res => this.setState({ todoList: res.data}))
+       .get("/api/timetable/")
+       .then(res => this.setState({ todoList: res.data }))
        .catch(err => console.log(err));
    };
    displayCompleted = status => {
@@ -79,25 +65,22 @@ const httpLoc = '/api/grades';
    renderTabList = () => {
 
    };
-   
-
    renderItems = () => {
-    // var i = 1;
-    //  const { viewCompleted } = this.state;
-    //  const newItems = this.state.todoList.filter(
+    var i = 1;
+     const { viewCompleted } = this.state;
+     const newItems = this.state.todoList;
     //    item => item.completed === viewCompleted
     //  );
-     const newItems = this.state.todoList
      return newItems.map(item => (
        <table>
-      <div className = "content-section container">
-         <div className="edj-row">
-         {/* <span className="edj-date date">{i++}</span>  */}
-         <span className="edj-item degree">{item.component}</span> 
-         <span className="edj-item degree">{item.outcomes}</span> 
-          <span className="edj-item degree">{item.weight}</span>
+      <div class = "content-section container">
+         <div class="edj-row">
+         <span class="time-item timeTable">{item.section}</span> 
+          <span class="time-item timeTable">{item.daysOfWeek}</span>
+          <span class="time-item timeTable">{item.time}</span>
+          <span class="time-item timeTable">{item.location}</span>
 
-          <span className="edj-item degree">
+          <span class="time-item timeTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -109,11 +92,7 @@ const httpLoc = '/api/grades';
        </div>
        </table>
      ));
-     
    };
-
-   
-
    toggle = () => {
      this.setState({ modal: !this.state.modal });
    };
@@ -125,21 +104,21 @@ const httpLoc = '/api/grades';
      if (item.id) {
        const axios = require("axios");
        axios
-         .put(`${httpLoc}/${item.id}/`, item)
+         .put(`/api/timetable/${item.id}/`, item)
          .then(res => this.refreshList());
        return;
      }
      axios
-       .post(`${httpLoc}/`, item)
+       .post(`/api/timetable/`, item)
        .then(res => this.refreshList());
    };
    handleDelete = item => {
      axios
-       .delete(`${httpLoc}/${item.id}/`, item)
+       .delete(`/api/timetable/${item.id}/`, item)
        .then(res => this.refreshList());
    };
    createItem = () => {
-     const item = { component: "", outcomes: "", weight: "" };
+     const item = { section: "", daysOfWeek: "", time: "", location: "" };
      this.setState({ activeItem: item, modal: !this.state.modal });
      //todoList.push(item);
    };
@@ -149,15 +128,14 @@ const httpLoc = '/api/grades';
    render() {
      return (
        <main className="content">
-         <h1 className="text-white text-uppercase text-center my-4">Final Grade Determination</h1>
+         <h1 className="text-white text-uppercase text-center my-4">Time Table</h1>
          <div className="row ">
            <div className="col-md-6 col-sm-10 mx-auto p-0">
-             <div className="card p-4">
-             <div className = "content-section container">
-             {/* <div>{this.state.totalWeight}</div> */}
-         <div className="edj-row">
+             <div className="card p-3">
+             <div class = "content-section container">
+         <div class="edj-row">
            <h4>
-              <span className = "edj-item degree">Component</span> <span class ="edj-item degree">Learning Outcome(s) Evaluated</span> <span class = "edj-item degree">Weight</span>
+              <span class = "edj-item degree">Section</span> <span class ="time-item timeTable">Days of Week</span> <span class = "time-item timeTable">Time</span><span class = "time-item timeTable">Location</span><span class = "time-item timeTable">     </span>
               </h4>
               </div>
             </div>
@@ -169,12 +147,11 @@ const httpLoc = '/api/grades';
              </div>
              <div className="">
                  <button onClick={this.createItem} className="btn btn-primary">
-                   Add Grade Component
+                   Add Section
                  </button>
                </div>
            </div>
          </div>
-         
          
          {this.state.modal ? (
            <Modal

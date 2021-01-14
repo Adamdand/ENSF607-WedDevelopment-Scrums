@@ -5,45 +5,32 @@
  import axios from "axios";
  import '../../App.css';
  
-const httpLoc = '/api/grades';
 
- class GradeOutcomes extends Component {
+ class LearningOutcomes extends Component {
 
-    
-
+  
    constructor(props) {
      super(props);
      this.state = {
        viewCompleted: false,
        activeItem: {
-         component: "",
-         outcomes: "",
-         weight: false
+         section: "",
+         fname: "",
+         lname: "",
+         phone: "",
+         office: "",
+         email: "",
        },
-       todoList: [],
-       totalWeight: ""
+       todoList: []
      };
    }
    componentDidMount() {
      this.refreshList();
-    //  this.calcTotal();
    }
-  //  calcTotal = () => {
-  //   const newItems = this.state.todoList
-  //   console.log(newItems);
-  //   let total = 0;
-    
-  //   newItems.map(item => {
-  //     console.log(item.weight);
-  //     total += parseInt(item.weight);
-  //   });
-  //   this.setState({totalWeight: total});
-  //  }
-
    refreshList = () => {
      axios
-       .get(`${httpLoc}`)
-       .then(res => this.setState({ todoList: res.data}))
+       .get("/api/instructor/")
+       .then(res => this.setState({ todoList: res.data }))
        .catch(err => console.log(err));
    };
    displayCompleted = status => {
@@ -79,25 +66,25 @@ const httpLoc = '/api/grades';
    renderTabList = () => {
 
    };
-   
-
    renderItems = () => {
-    // var i = 1;
-    //  const { viewCompleted } = this.state;
-    //  const newItems = this.state.todoList.filter(
-    //    item => item.completed === viewCompleted
-    //  );
-     const newItems = this.state.todoList
+    var i = 1;
+     const { viewCompleted } = this.state;
+     const newItems = this.state.todoList;
+     //  (item => item.completed === viewCompleted
+    // );
      return newItems.map(item => (
        <table>
-      <div className = "content-section container">
-         <div className="edj-row">
-         {/* <span className="edj-date date">{i++}</span>  */}
-         <span className="edj-item degree">{item.component}</span> 
-         <span className="edj-item degree">{item.outcomes}</span> 
-          <span className="edj-item degree">{item.weight}</span>
+      <div class = "content-section container">
+         <div class="edj-row">
+         <span class="edj-item degree">{item.section}</span> 
+          <span class="edj-item degree">{item.fname}</span>
+          <span class="edj-item degree">{item.lname}</span>
+          <span class="edj-item degree">{item.phone}</span>
+          <span class="edj-item degree">{item.office}</span>
+          <span class="edj-item degree">{item.email}</span>
 
-          <span className="edj-item degree">
+
+          <span class="edj-item degree">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -109,11 +96,7 @@ const httpLoc = '/api/grades';
        </div>
        </table>
      ));
-     
    };
-
-   
-
    toggle = () => {
      this.setState({ modal: !this.state.modal });
    };
@@ -125,21 +108,21 @@ const httpLoc = '/api/grades';
      if (item.id) {
        const axios = require("axios");
        axios
-         .put(`${httpLoc}/${item.id}/`, item)
+         .put(`/api/instructor/${item.id}/`, item)
          .then(res => this.refreshList());
        return;
      }
      axios
-       .post(`${httpLoc}/`, item)
+       .post(`/api/instructor/`, item)
        .then(res => this.refreshList());
    };
    handleDelete = item => {
      axios
-       .delete(`${httpLoc}/${item.id}/`, item)
+       .delete(`/api/instructor/${item.id}/`, item)
        .then(res => this.refreshList());
    };
    createItem = () => {
-     const item = { component: "", outcomes: "", weight: "" };
+     const item = { title: "", description: "", completed: false };
      this.setState({ activeItem: item, modal: !this.state.modal });
      //todoList.push(item);
    };
@@ -149,15 +132,14 @@ const httpLoc = '/api/grades';
    render() {
      return (
        <main className="content">
-         <h1 className="text-white text-uppercase text-center my-4">Final Grade Determination</h1>
+         <h1 className="text-white text-uppercase text-center my-4">Instructors</h1>
          <div className="row ">
            <div className="col-md-6 col-sm-10 mx-auto p-0">
-             <div className="card p-4">
-             <div className = "content-section container">
-             {/* <div>{this.state.totalWeight}</div> */}
-         <div className="edj-row">
+             <div className="card p-3">
+             <div class = "content-section container">
+         <div class="edj-row">
            <h4>
-              <span className = "edj-item degree">Component</span> <span class ="edj-item degree">Learning Outcome(s) Evaluated</span> <span class = "edj-item degree">Weight</span>
+              <span class = "edj-item degree">Section</span> <span class ="edj-item degree">F.Name</span> <span class = "edj-item degree">L.Name</span><span class = "edj-item degree">Phone</span><span class = "edj-item degree">Office</span><span class = "edj-item degree">Email</span>
               </h4>
               </div>
             </div>
@@ -169,12 +151,11 @@ const httpLoc = '/api/grades';
              </div>
              <div className="">
                  <button onClick={this.createItem} className="btn btn-primary">
-                   Add Grade Component
+                   Add Instructor
                  </button>
                </div>
            </div>
          </div>
-         
          
          {this.state.modal ? (
            <Modal
@@ -187,4 +168,4 @@ const httpLoc = '/api/grades';
      );
    }
  }
- export default GradeOutcomes;
+ export default LearningOutcomes;

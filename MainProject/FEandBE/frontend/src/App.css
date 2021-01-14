@@ -72,7 +72,7 @@
 .degree {
   color: #555;
   font-weight: bold;
-  width: 32%;
+  width: 20%;
 }
 
 .date {
@@ -104,6 +104,7 @@
   margin-bottom: 1em;
 }
 
+<<<<<<< HEAD
 .calendarinfo {
   color: white;
 }
@@ -164,3 +165,20 @@
   text-align: center;
 }
 
+=======
+.timeTable {
+  color: #555;
+  font-weight: bold;
+  width: 20%;
+}
+
+.time-item{
+  display: inline-block;
+}
+
+.time-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+>>>>>>> e4887614af6ce08b0012675cd894f70df6e58285

@@ -32,37 +32,47 @@
      const { toggle, onSave } = this.props;
      return (
        <Modal isOpen={true} toggle={toggle}>
-         <ModalHeader toggle={toggle}> Grade Component </ModalHeader>
+         <ModalHeader toggle={toggle}> TimeTable </ModalHeader>
          <ModalBody>
            <Form>
              <FormGroup>
-               <Label for="component">Component</Label>
+               <Label for="section">Section</Label>
                <Input
                  type="text"
-                 name="component"
-                 value={this.state.activeItem.component}
+                 name="section"
+                 value={this.state.activeItem.section}
                  onChange={this.handleChange}
-                 placeholder="Enter Componenent"
+                 placeholder="Enter Section"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="outcomes">Learning Outcome(s) Evaluated</Label>
+               <Label for="daysOfWeek">Days of the Week</Label>
                <Input
                  type="text"
-                 name="outcomes"
-                 value={this.state.activeItem.outcomes}
+                 name="daysOfWeek"
+                 value={this.state.activeItem.daysOfWeek}
                  onChange={this.handleChange}
-                 placeholder="Enter Learning Outcome(s)"
+                 placeholder="Enter Days of the daysOfWeek"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="weight">Weight</Label>
+               <Label for="time">Time</Label>
                <Input
-                 type="number"
-                 name="weight"
-                 value={this.state.activeItem.weight}
+                 type="text"
+                 name="time"
+                 value={this.state.activeItem.time}
                  onChange={this.handleChange}
-                 placeholder="Enter Weight"
+                 placeholder="Enter Time"
+               />
+             </FormGroup>
+             <FormGroup>
+               <Label for="location">Location</Label>
+               <Input
+                 type="text"
+                 name="location"
+                 value={this.state.activeItem.location}
+                 onChange={this.handleChange}
+                 placeholder="Enter Location"
                />
              </FormGroup>
            </Form>

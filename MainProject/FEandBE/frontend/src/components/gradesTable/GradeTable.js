@@ -5,9 +5,9 @@
  import axios from "axios";
  import '../../App.css';
  
-const httpLoc = '/api/grades';
+const httpLoc = '/api/gradesTable';
 
- class GradeOutcomes extends Component {
+ class GradeTable extends Component {
 
     
 
@@ -16,12 +16,10 @@ const httpLoc = '/api/grades';
      this.state = {
        viewCompleted: false,
        activeItem: {
-         component: "",
-         outcomes: "",
-         weight: false
+         letter: '',
+         minGrade: ''
        },
        todoList: [],
-       totalWeight: ""
      };
    }
    componentDidMount() {
@@ -93,16 +91,15 @@ const httpLoc = '/api/grades';
       <div className = "content-section container">
          <div className="edj-row">
          {/* <span className="edj-date date">{i++}</span>  */}
-         <span className="edj-item degree">{item.component}</span> 
-         <span className="edj-item degree">{item.outcomes}</span> 
-          <span className="edj-item degree">{item.weight}</span>
+         <span className="edj-item degree">{item.letter}</span> 
+         <span className="edj-item degree">{item.minGrade}</span> 
 
           <span className="edj-item degree">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
-           <button
-             onClick={() => this.handleDelete(item)} className="btn btn-danger">delete</button>
+           {/* <button
+             onClick={() => this.handleDelete(item)} className="btn btn-danger">delete</button> */}
          </span>
 
         </div>
@@ -130,26 +127,26 @@ const httpLoc = '/api/grades';
        return;
      }
      axios
-       .post(`${httpLoc}/`, item)
+       .post(`${httpLoc}`, item)
        .then(res => this.refreshList());
    };
-   handleDelete = item => {
-     axios
-       .delete(`${httpLoc}/${item.id}/`, item)
-       .then(res => this.refreshList());
-   };
-   createItem = () => {
-     const item = { component: "", outcomes: "", weight: "" };
-     this.setState({ activeItem: item, modal: !this.state.modal });
-     //todoList.push(item);
-   };
+//    handleDelete = item => {
+//      axios
+//        .delete(`${httpLoc}/${item.id}/`, item)
+//        .then(res => this.refreshList());
+//    };
+//    createItem = () => {
+//      const item = { letter: "", minGrade: "" };
+//      this.setState({ activeItem: item, modal: !this.state.modal });
+//      //todoList.push(item);
+//    };
    editItem = item => {
      this.setState({ activeItem: item, modal: !this.state.modal });
    };
    render() {
      return (
        <main className="content">
-         <h1 className="text-white text-uppercase text-center my-4">Final Grade Determination</h1>
+         <h1 className="text-white text-uppercase text-center my-4">Letter Grades</h1>
          <div className="row ">
            <div className="col-md-6 col-sm-10 mx-auto p-0">
              <div className="card p-4">
@@ -157,7 +154,7 @@ const httpLoc = '/api/grades';
              {/* <div>{this.state.totalWeight}</div> */}
          <div className="edj-row">
            <h4>
-              <span className = "edj-item degree">Component</span> <span class ="edj-item degree">Learning Outcome(s) Evaluated</span> <span class = "edj-item degree">Weight</span>
+              <span className = "edj-item degree">Letter Grade</span> <span class ="edj-item degree">Minimum Grade</span> <span class = "edj-item degree"></span>
               </h4>
               </div>
             </div>
@@ -167,11 +164,6 @@ const httpLoc = '/api/grades';
                  {this.renderItems()}
                </ul>
              </div>
-             <div className="">
-                 <button onClick={this.createItem} className="btn btn-primary">
-                   Add Grade Component
-                 </button>
-               </div>
            </div>
          </div>
          
@@ -187,4 +179,4 @@ const httpLoc = '/api/grades';
      );
    }
  }
- export default GradeOutcomes;
+ export default GradeTable;
