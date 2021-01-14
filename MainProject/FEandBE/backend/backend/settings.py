@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'timetable',
     'instructor',
     'grades',
+    'calendarInfo',
   ]
 
 
