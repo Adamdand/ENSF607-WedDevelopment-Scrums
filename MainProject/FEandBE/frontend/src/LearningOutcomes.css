@@ -1,0 +1,106 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .content-section {
+    margin: 1em;
+  }
+  
+  .container > div {
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline; /* For IE7 */
+    zoom: 1; /* Trigger hasLayout */
+    margin-left: 1%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .containerTitle > div {
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline; /* For IE7 */
+    zoom: 1; /* Trigger hasLayout */
+    margin-left: 1%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .container > div:first-child {
+    margin-left: 0;
+  }
+  
+  .edj-item{
+    display: inline-block;
+  }
+  
+  .degree {
+    color: #555;
+    font-weight: bold;
+    width: 50%;
+  }
+  
+  .date {
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+    width: 5%;
+  }
+  
+  .menu {
+    display: table;
+    width:80%;
+    table-layout: fixed;
+  }
+  .menuitem {
+    max-width:100px;
+    display: table-cell;
+    text-align: left;
+    flex-flow: row wrap;
+  }
+  
+  .edj-date {
+    width: 25%;
+  }
+  
+  .edj-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+  
