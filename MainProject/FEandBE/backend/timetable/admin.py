@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import TimeTable # add this
     
 class TimeTableAdmin(admin.ModelAdmin):  # add this
-  list_display = ('title', 'description', 'completed') # add this
+  list_display = ('section', 'daysOfWeek', 'time', 'location') # add this
         
 # Register your models here.
 admin.site.register(TimeTable, TimeTableAdmin) # add this

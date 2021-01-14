@@ -4,9 +4,12 @@ from django.db import models
 
 # add this
 class TimeTable(models.Model):
-  title = models.CharField(max_length=120)
-  description = models.TextField()
-  completed = models.BooleanField(default=False)
+  section = models.CharField(max_length=120)
+  daysOfWeek = models.TextField()
+  time = models.TextField()
+  location = models.TextField()
+  
+
       
   def __str__(self):
     return self.title

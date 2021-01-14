@@ -3,7 +3,7 @@
  import React, { Component } from "react";
  import Modal from "./Modal";
  import axios from "axios";
- import '../../App.css';
+ import '../../TimeTable.css';
  
 
  class GradeOutcomes extends Component {
@@ -14,9 +14,11 @@
      this.state = {
        viewCompleted: false,
        activeItem: {
-         title: "",
-         description: "",
-         completed: false
+         section: "",
+         daysOfWeek: "",
+         time: "",
+         location: "",
+
        },
        todoList: []
      };
@@ -66,18 +68,19 @@
    renderItems = () => {
     var i = 1;
      const { viewCompleted } = this.state;
-     const newItems = this.state.todoList.filter(
-       item => item.completed === viewCompleted
-     );
+     const newItems = this.state.todoList;
+    //    item => item.completed === viewCompleted
+    //  );
      return newItems.map(item => (
        <table>
       <div class = "content-section container">
          <div class="edj-row">
-         <span class="edj-date date">{i++}</span> 
-         <span class="edj-item degree">{item.title}</span> 
-          <span class="edj-item degree">{item.description}</span>
+         <span class="time-item timeTable">{item.section}</span> 
+          <span class="time-item timeTable">{item.daysOfWeek}</span>
+          <span class="time-item timeTable">{item.time}</span>
+          <span class="time-item timeTable">{item.location}</span>
 
-          <span class="edj-item degree">
+          <span class="time-item timeTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -115,7 +118,7 @@
        .then(res => this.refreshList());
    };
    createItem = () => {
-     const item = { title: "", description: "", completed: false };
+     const item = { section: "", daysOfWeek: "", time: "", location: "" };
      this.setState({ activeItem: item, modal: !this.state.modal });
      //todoList.push(item);
    };
@@ -125,14 +128,14 @@
    render() {
      return (
        <main className="content">
-         <h1 className="text-white text-uppercase text-center my-4">Learning Outcomes</h1>
+         <h1 className="text-white text-uppercase text-center my-4">Time Table</h1>
          <div className="row ">
            <div className="col-md-6 col-sm-10 mx-auto p-0">
              <div className="card p-3">
              <div class = "content-section container">
          <div class="edj-row">
            <h4>
-              <span class = "edj-item degree">Section</span> <span class ="edj-item degree">Days of Week</span> <span class = "edj-item degree">Time</span><span class = "edj-item degree">Location</span>
+              <span class = "edj-item degree">Section</span> <span class ="time-item timeTable">Days of Week</span> <span class = "time-item timeTable">Time</span><span class = "time-item timeTable">Location</span><span class = "time-item timeTable">     </span>
               </h4>
               </div>
             </div>

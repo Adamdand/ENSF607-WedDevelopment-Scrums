@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class TimetableConfig(AppConfig):
+class timetableConfig(AppConfig):
     name = 'timetable'

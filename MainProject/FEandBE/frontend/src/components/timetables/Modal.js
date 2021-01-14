@@ -36,41 +36,41 @@
          <ModalBody>
            <Form>
              <FormGroup>
-               <Label for="title">Section</Label>
+               <Label for="section">Section</Label>
                <Input
                  type="text"
-                 name="title"
-                 value={this.state.activeItem.title}
+                 name="section"
+                 value={this.state.activeItem.section}
                  onChange={this.handleChange}
                  placeholder="Enter Section"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="description">Days of the Week</Label>
+               <Label for="daysOfWeek">Days of the Week</Label>
                <Input
                  type="text"
-                 name="description"
-                 value={this.state.activeItem.description}
+                 name="daysOfWeek"
+                 value={this.state.activeItem.daysOfWeek}
                  onChange={this.handleChange}
-                 placeholder="Enter Days of the Week"
+                 placeholder="Enter Days of the daysOfWeek"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="description">Time</Label>
+               <Label for="time">Time</Label>
                <Input
                  type="text"
-                 name="description"
-                 value={this.state.activeItem.description}
+                 name="time"
+                 value={this.state.activeItem.time}
                  onChange={this.handleChange}
                  placeholder="Enter Time"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="description">Location</Label>
+               <Label for="location">Location</Label>
                <Input
                  type="text"
-                 name="description"
-                 value={this.state.activeItem.description}
+                 name="location"
+                 value={this.state.activeItem.location}
                  onChange={this.handleChange}
                  placeholder="Enter Location"
                />
