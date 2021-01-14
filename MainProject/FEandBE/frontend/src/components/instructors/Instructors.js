@@ -6,7 +6,7 @@
  import '../../App.css';
  
 
- class LearningOutcomes extends Component {
+ class Instructors extends Component {
 
   
    constructor(props) {
@@ -168,4 +168,4 @@
      );
    }
  }
- export default LearningOutcomes;
+ export default Instructors;

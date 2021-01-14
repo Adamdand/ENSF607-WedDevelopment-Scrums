@@ -6,7 +6,7 @@
  import '../../TimeTable.css';
  
 
- class GradeOutcomes extends Component {
+ class TimeTable extends Component {
 
   
    constructor(props) {
@@ -164,4 +164,4 @@
      );
    }
  }
- export default GradeOutcomes;
+ export default TimeTable;
