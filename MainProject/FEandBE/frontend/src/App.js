@@ -7,8 +7,8 @@
  import Instructors from "./components/instructors/Instructors";
  import GradesTable from "./components/gradesTable/GradeTable";
  import './App.css';
- 
 
+ 
  class App extends Component {
    render() {
      return (
