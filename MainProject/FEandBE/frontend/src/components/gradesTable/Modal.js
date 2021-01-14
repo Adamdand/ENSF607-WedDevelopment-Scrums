@@ -32,20 +32,20 @@
      const { toggle, onSave } = this.props;
      return (
        <Modal isOpen={true} toggle={toggle}>
-         <ModalHeader toggle={toggle}> Grade Component </ModalHeader>
+         <ModalHeader toggle={toggle}> Letter Grade </ModalHeader>
          <ModalBody>
            <Form>
              <FormGroup>
-               <Label for="component">Component</Label>
+               <Label for="minGrade">Minimum Grade</Label>
                <Input
-                 type="text"
-                 name="component"
+                 type="number"
+                 name="minGrade"
                  value={this.state.activeItem.component}
                  onChange={this.handleChange}
-                 placeholder="Enter Componenent"
+                 placeholder="Enter Minimum Grade"
                />
              </FormGroup>
-             <FormGroup>
+             {/* <FormGroup>
                <Label for="outcomes">Learning Outcome(s) Evaluated</Label>
                <Input
                  type="text"
@@ -64,7 +64,7 @@
                  onChange={this.handleChange}
                  placeholder="Enter Weight"
                />
-             </FormGroup>
+             </FormGroup> */}
            </Form>
          </ModalBody>
          <ModalFooter>

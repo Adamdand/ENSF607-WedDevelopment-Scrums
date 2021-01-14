@@ -5,6 +5,7 @@
  import GradeOutcomes from "./components/grades/GradeOutcomes";
  import TimeTable from "./components/timetables/TimeTable";
  import Instructors from "./components/instructors/Instructors";
+ import GradesTable from "./components/gradesTable/GradeTable";
  import './App.css';
  
 
@@ -16,6 +17,7 @@
          <TimeTable></TimeTable>
          <Instructors></Instructors>
          <GradeOutcomes></GradeOutcomes>
+         <GradesTable></GradesTable>
        </div>
      );
    }
