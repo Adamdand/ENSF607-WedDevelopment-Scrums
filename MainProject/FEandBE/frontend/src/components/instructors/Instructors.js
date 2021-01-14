@@ -76,15 +76,15 @@
        <table>
       <div class = "content-section container">
          <div class="edj-row">
-         <span class="edj-item degree">{item.section}</span> 
-          <span class="edj-item degree">{item.fname}</span>
-          <span class="edj-item degree">{item.lname}</span>
-          <span class="edj-item degree">{item.phone}</span>
-          <span class="edj-item degree">{item.office}</span>
-          <span class="edj-item degree">{item.email}</span>
+         <span class="learning-item LearningTable">{item.section}</span> 
+          <span class="learning-item LearningTable">{item.fname}</span>
+          <span class="learning-item LearningTable">{item.lname}</span>
+          <span class="learning-item LearningTable">{item.phone}</span>
+          <span class="learning-item LearningTable">{item.office}</span>
+          <span class="learning-item LearningTable">{item.email}</span>
 
 
-          <span class="edj-item degree">
+          <span class="learning-item LearningTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -137,9 +137,9 @@
            <div className="col-md-6 col-sm-10 mx-auto p-0">
              <div className="card p-3">
              <div class = "content-section container">
-         <div class="edj-row">
+         <div class="learning-row">
            <h4>
-              <span class = "edj-item degree">Section</span> <span class ="edj-item degree">F.Name</span> <span class = "edj-item degree">L.Name</span><span class = "edj-item degree">Phone</span><span class = "edj-item degree">Office</span><span class = "edj-item degree">Email</span>
+              <span class = "learning-item LearningTable">Section</span> <span class ="learning-item LearningTable">F.Name</span> <span class = "learning-item LearningTable">L.Name</span><span class = "learning-item LearningTable">Phone</span><span class = "learning-item LearningTable">Office</span><span class = "learning-item LearningTable">Email</span>
               </h4>
               </div>
             </div>

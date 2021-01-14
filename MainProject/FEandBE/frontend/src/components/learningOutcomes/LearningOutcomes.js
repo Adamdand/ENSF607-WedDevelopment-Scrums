@@ -74,10 +74,10 @@
       <div class = "content-section container">
          <div class="edj-row">
          <span class="edj-date date">{i++}</span> 
-         <span class="edj-item degree">{item.title}</span> 
-          <span class="edj-item degree">{item.description}</span>
+         <span class="learning-item LearningTable">{item.title}</span> 
+          <span class="learning-item LearningTable">{item.description}</span>
 
-          <span class="edj-item degree">
+          <span class="learning-item LearningTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -130,9 +130,9 @@
            <div className="col-md-6 col-sm-10 mx-auto p-0">
              <div className="card p-3">
              <div class = "content-section container">
-         <div class="edj-row">
+         <div class="learning-row">
            <h4>
-              <span class = "edj-item degree">Graduate Attribute</span> <span class ="edj-item degree">Instruction Level</span> <span class = "edj-item degree">      </span>
+              <span class = "learning-item LearningTable">Graduate Attribute</span> <span class ="learning-item LearningTable">Instruction Level</span> <span class = "learning-item LearningTable">      </span>
               </h4>
               </div>
             </div>
