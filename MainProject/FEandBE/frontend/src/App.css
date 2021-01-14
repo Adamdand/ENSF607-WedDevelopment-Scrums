@@ -103,3 +103,64 @@
   padding-bottom: 1em;
   margin-bottom: 1em;
 }
+
+.calendarinfo {
+  color: white;
+}
+
+.container {
+  position: relative;
+}
+
+.textarea {
+  width: 55%;
+  text-align: center;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: calc(1px + 2vmin);
+
+  outline: none;
+  min-height: 100px;
+  padding:0;
+  box-shadow: none;
+  display: block;
+  border: 2px solid black;
+  overflow: hidden;
+  transition: height 0.2s ease;
+
+
+}
+
+.textarea--ghost {
+  opacity: 0.3;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.courseInfo-form{
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.courseInfo-form .form-group{
+  padding-bottom: 15px;
+}
+
+.courseInfo-form label{
+  display: block;
+}
+
+.courseInfo-form input{
+  padding: 8px;
+  width:50%;
+  text-align: center;
+}
+

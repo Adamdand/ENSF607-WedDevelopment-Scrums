@@ -4,14 +4,15 @@
  import LearningOutcomes from "./components/learningOutcomes/LearningOutcomes"
  import GradeOutcomes from "./components/grades/GradeOutcomes";
  import './App.css';
- 
+ import Form from "./components/calendarInfo/Form";
 
  class App extends Component {
    render() {
      return (
        <div>
+         <Form></Form>
          <LearningOutcomes></LearningOutcomes>
-         <GradeOutcomes></GradeOutcomes>
+         {/* <GradeOutcomes></GradeOutcomes> */}
        </div>
      );
    }
