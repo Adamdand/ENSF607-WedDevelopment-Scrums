@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'todo',
     'timetable',
     'instructor',
+    'grades',
   ]
 
 
