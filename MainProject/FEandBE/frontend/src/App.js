@@ -3,6 +3,7 @@
  import React, { Component } from "react";
  import LearningOutcomes from "./components/learningOutcomes/LearningOutcomes"
  import GradeOutcomes from "./components/grades/GradeOutcomes";
+ import TimeTable from "./components/timetables/TimeTable";
  import './App.css';
  
 
@@ -10,6 +11,7 @@
    render() {
      return (
        <div>
+         <TimeTable></TimeTable>
          <LearningOutcomes></LearningOutcomes>
          <GradeOutcomes></GradeOutcomes>
        </div>
