@@ -79,12 +79,12 @@
   text-align: left;
   color: #555;
   font-weight: bold;
-  width: 5%;
+  width: %;
 }
 
 .menu {
   display: table;
-  width:50%;
+  width:80%;
   table-layout: fixed;
 }
 .menuitem {
@@ -123,7 +123,7 @@
 .LearningTable {
   color: #555;
   font-weight: bold;
-  width: 30%;
+  width: 33%;
 }
 
 .learning-item{
@@ -131,6 +131,22 @@
 }
 
 .learning-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.InstructorTable {
+  color: #555;
+  font-weight: bold;
+  width: 14%;
+}
+
+.Instructor-item{
+  display: inline-block;
+}
+
+.Instructor-row {
   border-bottom: 1px solid black;
   padding-bottom: 1em;
   margin-bottom: 1em;

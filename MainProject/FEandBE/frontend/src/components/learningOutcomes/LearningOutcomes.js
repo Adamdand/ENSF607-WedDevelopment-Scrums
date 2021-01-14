@@ -71,8 +71,8 @@
      return newItems.map(item => (
        <table>
       <div class = "content-section container">
-         <div class="edj-row">
-         <span class="edj-date date">{i++}</span> 
+         <div class="learning-row">
+         <span class="learning-item LearningTable">{i++}</span> 
           <span class="learning-item LearningTable">{item.description}</span>
 
           <span class="learning-item LearningTable">
@@ -130,7 +130,7 @@
              <div class = "content-section container">
          <div class="learning-row">
            <h4>
-              <span class = "learning-item LearningTable">learning Outcomes</span> <span class = "learning-item LearningTable">      </span>
+              <span class = "learning-item LearningTable">Number</span><span class = "learning-item LearningTable">learning Outcomes</span> <span class = "learning-item LearningTable">      </span>
               </h4>
               </div>
             </div>

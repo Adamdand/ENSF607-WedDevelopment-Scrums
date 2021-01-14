@@ -75,16 +75,16 @@
      return newItems.map(item => (
        <table>
       <div class = "content-section container">
-         <div class="edj-row">
-         <span class="learning-item LearningTable">{item.section}</span> 
-          <span class="learning-item LearningTable">{item.fname}</span>
-          <span class="learning-item LearningTable">{item.lname}</span>
-          <span class="learning-item LearningTable">{item.phone}</span>
-          <span class="learning-item LearningTable">{item.office}</span>
-          <span class="learning-item LearningTable">{item.email}</span>
+         <div class="Instructor-row">
+         <span class="Instructor-item InstructorTable">{item.section}</span> 
+          <span class="Instructor-item InstructorTable">{item.fname}</span>
+          <span class="Instructor-item InstructorTable">{item.lname}</span>
+          <span class="Instructor-item InstructorTable">{item.phone}</span>
+          <span class="Instructor-item InstructorTable">{item.office}</span>
+          <span class="Instructor-item InstructorTable">{item.email}</span>
 
 
-          <span class="learning-item LearningTable">
+          <span class="Todo-item TodoTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -137,9 +137,9 @@
            <div className="col-md-6 col-sm-10 mx-auto p-0">
              <div className="card p-3">
              <div class = "content-section container">
-         <div class="learning-row">
+         <div class="Instructor-row">
            <h4>
-              <span class = "learning-item LearningTable">Section</span> <span class ="learning-item LearningTable">F.Name</span> <span class = "learning-item LearningTable">L.Name</span><span class = "learning-item LearningTable">Phone</span><span class = "learning-item LearningTable">Office</span><span class = "learning-item LearningTable">Email</span>
+              <span class = "Instructor-item InstructorTable">Section</span> <span class ="Instructor-item InstructorTable">F.Name</span> <span class = "Instructor-item InstructorTable">L.Name</span><span class = "Instructor-item InstructorTable">Phone</span><span class = "Instructor-item InstructorTable">Office</span><span class = "Instructor-item InstructorTable">Email</span><span class = "Instructor-item InstructorTable">    </span>
               </h4>
               </div>
             </div>
