@@ -6,16 +6,14 @@
  import TimeTable from "./components/timetables/TimeTable";
  import Instructors from "./components/instructors/Instructors";
  import GradesTable from "./components/gradesTable/GradeTable";
- import MyPdf from "./components/myPDF/MyPdf";
+ import MyPdf from "./components/myPDF/myPdf";
+ import RequiredTextbook from "./components/requiredTextbook/RequiredTextbook"
+ import RecommendedTextbook from "./components/recommendedTextbook/RecommendedTextbook"
 
  import Form from './components/calendarInfo/Form';
  import Exam from './components/examinations/Exam';
 
  import './App.css';
-
-
- 
-
 
  class App extends Component {
    render() {
@@ -29,6 +27,9 @@
          <Exam></Exam>
          <GradeOutcomes></GradeOutcomes>
          <GradesTable></GradesTable>
+         <RequiredTextbook></RequiredTextbook>
+         <RecommendedTextbook></RecommendedTextbook>
+         
          <MyPdf></MyPdf>
          
          
