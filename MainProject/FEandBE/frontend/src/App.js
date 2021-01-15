@@ -13,6 +13,7 @@
 
  import Form from './components/calendarInfo/Form';
  import Exam from './components/examinations/Exam';
+ import Calculator from './components/useOfCalc/Calculator';
 
  import './App.css';
 
@@ -33,6 +34,7 @@
          <TimeTable></TimeTable>
          <Instructors></Instructors>
          <Exam></Exam>
+         <Calculator></Calculator>
          <GradeOutcomes></GradeOutcomes>
          <GradesTable></GradesTable>
          <RequiredTextbook></RequiredTextbook>

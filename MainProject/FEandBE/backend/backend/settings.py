@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'examinations',
     'requiredTextbooks',
     'recommendedTextbooks',
+    'useOfCalc',
   ]
 
 

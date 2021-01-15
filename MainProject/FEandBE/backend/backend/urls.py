@@ -13,6 +13,7 @@ from gradesTable.api import GradesTableViewSet
 from examinations.api import ExaminationsViewSet
 from requiredTextbooks.api import RequiredTextBooksViewSet
 from recommendedTextbooks.api import RecommendedTextBooksViewSet
+from useOfCalc.api import UseOfCaclViewSet
         
 router = routers.DefaultRouter()                      # add this
 router.register(r'todos', views.TodoView, 'todo')     # add this
@@ -24,6 +25,7 @@ router.register(r'gradesTable', GradesTableViewSet, 'gradesTable')
 router.register(r'examinations', ExaminationsViewSet, 'examinations') 
 router.register(r'requiredTextbooks', RequiredTextBooksViewSet, 'requiredTextbooks') 
 router.register(r'recommendedTextbooks', RecommendedTextBooksViewSet, 'recommendedTextbooks') 
+router.register(r'useOfCalc', UseOfCaclViewSet, 'useOfCalc') 
 
 urlpatterns = [
     path('admin/', admin.site.urls),           
