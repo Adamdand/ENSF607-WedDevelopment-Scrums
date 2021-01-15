@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import jsPDF from 'jspdf';
 import { render } from 'react-dom';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import styled, { css } from 'styled-components';
 
-export default class MyPdf2 extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+class PrintThisComponent extends Component {
+  render() {
+    return (
+      <div>
+        <button onClick={() => window.print()}>PRINT</button>
+        <p>Click above button opens print preview with these words on page</p>
+      </div>
+    )
+  }
+}
 
-        }
-    }
+export default PrintThisComponent
 
+/**
     //jspdf generator function
-
     jsPdfGenerator = () => {
         // new document in jspdf
         var doc = new jsPDF('p', 'pt');
@@ -38,16 +45,17 @@ export default class MyPdf2 extends Component {
     render() {
         return(
               <main className="content">
-                <h1 className="text-white text-uppercase text-center my-4">Time Table</h1>
+                <h1 className="text-white text-uppercase text-center my-4">Generate PDF</h1>
                 <div className="row ">
                   <div className="col-md-6 col-sm-10 mx-auto p-0">
                     <div className="">
-                    <button onClick={this.jsPdfGenerator}>Generate PDF</button>
+                    <button onClick={this.jsPdfGenerator} className="btn btn-primary">Generate PDF</button>
                       </div>
                   </div>
                 </div>
-                
               </main>
             );
           }
+           
 }
+*/

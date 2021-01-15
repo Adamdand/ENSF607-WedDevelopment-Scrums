@@ -13,6 +13,9 @@
 
  import './App.css';
 
+ import jsPDF from 'jspdf';
+ import html2canvas from 'html2canvas';
+ 
 
  
 
@@ -21,7 +24,7 @@
    render() {
      return (
 
-       <div>
+       <div id="capture">
          <Form></Form>
          <LearningOutcomes></LearningOutcomes>
          <TimeTable></TimeTable>
