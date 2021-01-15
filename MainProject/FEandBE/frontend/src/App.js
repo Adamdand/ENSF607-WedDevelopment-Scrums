@@ -7,8 +7,9 @@
  import Instructors from "./components/instructors/Instructors";
  import GradesTable from "./components/gradesTable/GradeTable";
  import MyPdf from "./components/myPDF/myPdf";
- import RequiredTextbook from "./components/requiredTextbook/RequiredTextbook"
- import RecommendedTextbook from "./components/recommendedTextbook/RecommendedTextbook"
+ import RequiredTextbook from "./components/requiredTextbook/RequiredTextbook";
+ import RecommendedTextbook from "./components/recommendedTextbook/RecommendedTextbook";
+ import ReactPDFButton from "./components/reactPDF/reactPDFButton";
 
  import Form from './components/calendarInfo/Form';
  import Exam from './components/examinations/Exam';
@@ -37,6 +38,7 @@
          <RequiredTextbook></RequiredTextbook>
          <RecommendedTextbook></RecommendedTextbook>
          
+         <ReactPDFButton></ReactPDFButton>
          <MyPdf></MyPdf>
          
          
