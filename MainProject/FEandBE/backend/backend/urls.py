@@ -10,6 +10,7 @@ from instructor import views as instructorviews
 from grades.api import GradesViewSet
 from calendarInfo.api import CalendarInfoViewSet
 from gradesTable.api import GradesTableViewSet
+from examinations.api import ExaminationsViewSet
         
 router = routers.DefaultRouter()                      # add this
 router.register(r'todos', views.TodoView, 'todo')     # add this
@@ -18,6 +19,7 @@ router.register(r'instructor', instructorviews.InstructorView, 'instructor')
 router.register(r'grades', GradesViewSet, 'grades')
 router.register(r'calendarInfo', CalendarInfoViewSet, 'calendarInfo') 
 router.register(r'gradesTable', GradesTableViewSet, 'gradesTable') 
+router.register(r'examinations', ExaminationsViewSet, 'examinations') 
 
 urlpatterns = [
     path('admin/', admin.site.urls),           

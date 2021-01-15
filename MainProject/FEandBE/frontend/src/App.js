@@ -9,6 +9,7 @@
  import MyPdf from "./components/myPDF/MyPdf";
 
  import Form from './components/calendarInfo/Form';
+ import Exam from './components/examinations/Exam';
 
  import './App.css';
 
@@ -25,6 +26,7 @@
          <LearningOutcomes></LearningOutcomes>
          <TimeTable></TimeTable>
          <Instructors></Instructors>
+         <Exam></Exam>
          <GradeOutcomes></GradeOutcomes>
          <GradesTable></GradesTable>
          <MyPdf></MyPdf>
