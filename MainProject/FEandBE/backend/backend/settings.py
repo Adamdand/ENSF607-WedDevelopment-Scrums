@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'calendarInfo',
     'gradesTable',
     'examinations',
+    'requiredTextbooks',
+    'recommendedTextbooks',
   ]
 
 

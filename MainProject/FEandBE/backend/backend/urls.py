@@ -11,6 +11,8 @@ from grades.api import GradesViewSet
 from calendarInfo.api import CalendarInfoViewSet
 from gradesTable.api import GradesTableViewSet
 from examinations.api import ExaminationsViewSet
+from requiredTextbooks.api import RequiredTextBooksViewSet
+from recommendedTextbooks.api import RecommendedTextBooksViewSet
         
 router = routers.DefaultRouter()                      # add this
 router.register(r'todos', views.TodoView, 'todo')     # add this
@@ -20,6 +22,8 @@ router.register(r'grades', GradesViewSet, 'grades')
 router.register(r'calendarInfo', CalendarInfoViewSet, 'calendarInfo') 
 router.register(r'gradesTable', GradesTableViewSet, 'gradesTable') 
 router.register(r'examinations', ExaminationsViewSet, 'examinations') 
+router.register(r'requiredTextbooks', RequiredTextBooksViewSet, 'requiredTextbooks') 
+router.register(r'recommendedTextbooks', RecommendedTextBooksViewSet, 'recommendedTextbooks') 
 
 urlpatterns = [
     path('admin/', admin.site.urls),           

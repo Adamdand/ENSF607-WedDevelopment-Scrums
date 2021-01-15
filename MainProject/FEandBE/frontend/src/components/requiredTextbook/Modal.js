@@ -36,33 +36,43 @@
          <ModalBody>
            <Form>
              <FormGroup>
-               <Label for="component">Component</Label>
+               <Label for="title">Title</Label>
                <Input
                  type="text"
-                 name="component"
-                 value={this.state.activeItem.component}
+                 name="title"
+                 value={this.state.activeItem.title}
                  onChange={this.handleChange}
-                 placeholder="Enter Componenent"
+                 placeholder="Enter Title"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="outcomes">Learning Outcome(s) Evaluated</Label>
+               <Label for="author">Author</Label>
                <Input
                  type="text"
-                 name="outcomes"
-                 value={this.state.activeItem.outcomes}
+                 name="author"
+                 value={this.state.activeItem.author}
                  onChange={this.handleChange}
-                 placeholder="Enter Learning Outcome(s)"
+                 placeholder="Enter Author"
                />
              </FormGroup>
              <FormGroup>
-               <Label for="weight">Weight</Label>
+               <Label for="edition">Edition, Year</Label>
                <Input
-                 type="number"
-                 name="weight"
-                 value={this.state.activeItem.weight}
+                 type="text"
+                 name="edition"
+                 value={this.state.activeItem.edition}
                  onChange={this.handleChange}
-                 placeholder="Enter Weight"
+                 placeholder="Enter Edition, Year"
+               />
+             </FormGroup>
+             <FormGroup>
+               <Label for="publisher">Publisher</Label>
+               <Input
+                 type="text"
+                 name="publisher"
+                 value={this.state.activeItem.publisher}
+                 onChange={this.handleChange}
+                 placeholder="Enter Publisher"
                />
              </FormGroup>
            </Form>

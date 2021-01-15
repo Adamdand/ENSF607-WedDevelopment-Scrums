@@ -5,9 +5,9 @@
  import axios from "axios";
  import '../../App.css';
  
-const httpLoc = '/api/grades';
+const httpLoc = '/api/recommendedTextbooks';
 
- class GradeOutcomes extends Component {
+ class RecommendedTextbook extends Component {
 
     
 
@@ -16,9 +16,10 @@ const httpLoc = '/api/grades';
      this.state = {
        viewCompleted: false,
        activeItem: {
-         component: "",
-         outcomes: "",
-         weight: false
+         title: "",
+         author: "",
+         edition: "",
+         publisher: ""
        },
        todoList: [],
        totalWeight: ""
@@ -93,9 +94,10 @@ const httpLoc = '/api/grades';
       <div className = "content-section container">
          <div className="edj-row">
          {/* <span className="edj-date date">{i++}</span>  */}
-         <span className="edj-item degree">{item.component}</span> 
-         <span className="edj-item degree">{item.outcomes}</span> 
-          <span className="edj-item degree">{item.weight}</span>
+         <span className="edj-item degree">{item.title}</span> 
+         <span className="edj-item degree">{item.author}</span> 
+          <span className="edj-item degree">{item.edition}</span>
+          <span className="edj-item degree">{item.publisher}</span>
 
           <span className="edj-item degree">
            <button
@@ -139,7 +141,7 @@ const httpLoc = '/api/grades';
        .then(res => this.refreshList());
    };
    createItem = () => {
-     const item = { component: "", outcomes: "", weight: "" };
+     const item = { title: "", author: "", edition: "", publisher: "" };
      this.setState({ activeItem: item, modal: !this.state.modal });
      //todoList.push(item);
    };
@@ -149,7 +151,7 @@ const httpLoc = '/api/grades';
    render() {
      return (
        <main className="content">
-         <h1 className="text-white text-uppercase text-center my-4">Final Grade Determination</h1>
+         <h1 className="text-white text-uppercase text-center my-4">Recommended Textbooks</h1>
          <div className="row ">
            <div className="col-md-6 col-sm-10 mx-auto p-0">
              <div className="card p-4">
@@ -157,7 +159,7 @@ const httpLoc = '/api/grades';
              {/* <div>{this.state.totalWeight}</div> */}
          <div className="edj-row">
            <h4>
-              <span className = "edj-item degree">Component</span> <span class ="edj-item degree">Learning Outcome(s) Evaluated</span> <span class = "edj-item degree">Weight</span>
+              <span className = "edj-item degree">Title</span> <span class ="edj-item degree">Author</span> <span class = "edj-item degree">Edition, Year</span> <span class = "edj-item degree">Publisher</span>
               </h4>
               </div>
             </div>
@@ -169,7 +171,7 @@ const httpLoc = '/api/grades';
              </div>
              <div className="">
                  <button onClick={this.createItem} className="btn btn-primary">
-                   Add Grade Component
+                   Add Textbook
                  </button>
                </div>
            </div>
@@ -187,4 +189,4 @@ const httpLoc = '/api/grades';
      );
    }
  }
- export default GradeOutcomes;
+ export default RecommendedTextbook;
