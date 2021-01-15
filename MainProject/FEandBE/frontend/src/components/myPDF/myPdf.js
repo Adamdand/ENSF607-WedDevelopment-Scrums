@@ -4,9 +4,7 @@ import { render } from 'react-dom';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 
-class LearningOutcomes extends Component {
-
-  
+export default class MyPdf2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,12 +22,12 @@ class LearningOutcomes extends Component {
         doc.text(20,20,"This is default text")
 
         //set font of the pdf document
-        doc.setFont('courier"');
+       // doc.setFont('courier"');
 
         //set font type
-        doc.setFontType('normal')
+        //doc.setFontType('normal')
 
-        doc.text(20,30,'this is text with courier font')
+        //doc.text(20,30,'this is text with courier font')
 
         //save the pdf document
         doc.save("generated.pdf");
@@ -45,7 +43,6 @@ class LearningOutcomes extends Component {
                   <div className="col-md-6 col-sm-10 mx-auto p-0">
                     <div className="">
                     <button onClick={this.jsPdfGenerator}>Generate PDF</button>
-                          Add Section
                       </div>
                   </div>
                 </div>
@@ -53,5 +50,4 @@ class LearningOutcomes extends Component {
               </main>
             );
           }
-        }
-        export default LearningOutcomes;
+}

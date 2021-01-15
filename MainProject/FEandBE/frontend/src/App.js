@@ -6,7 +6,8 @@
  import TimeTable from "./components/timetables/TimeTable";
  import Instructors from "./components/instructors/Instructors";
  import GradesTable from "./components/gradesTable/GradeTable";
- import myPdf from "./components/myPDF/myPdf";
+ import MyPdf from "./components/myPDF/MyPdf";
+
  import Form from './components/calendarInfo/Form';
 
  import './App.css';
@@ -19,16 +20,14 @@
    render() {
      return (
 
-
        <div>
-         
          <Form></Form>
          <LearningOutcomes></LearningOutcomes>
          <TimeTable></TimeTable>
          <Instructors></Instructors>
          <GradeOutcomes></GradeOutcomes>
          <GradesTable></GradesTable>
-         <myPdf></myPdf>
+         <MyPdf></MyPdf>
          
          
        </div>
