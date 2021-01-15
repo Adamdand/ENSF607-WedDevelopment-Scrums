@@ -91,13 +91,13 @@ const httpLoc = '/api/grades';
      return newItems.map(item => (
        <table>
       <div className = "content-section container">
-         <div className="edj-row">
+         <div className="grade-row">
          {/* <span className="edj-date date">{i++}</span>  */}
-         <span className="edj-item degree">{item.component}</span> 
-         <span className="edj-item degree">{item.outcomes}</span> 
-          <span className="edj-item degree">{item.weight}</span>
+         <span className="grade-item gradeTable">{item.component}</span> 
+         <span className="grade-item gradeTable">{item.outcomes}</span> 
+          <span className="grade-item gradeTable">{item.weight}</span>
 
-          <span className="edj-item degree">
+          <span className="grade-item gradeTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -155,9 +155,9 @@ const httpLoc = '/api/grades';
              <div className="card p-4">
              <div className = "content-section container">
              {/* <div>{this.state.totalWeight}</div> */}
-         <div className="edj-row">
+         <div className="grade-row">
            <h4>
-              <span className = "edj-item degree">Component</span> <span class ="edj-item degree">Learning Outcome(s) Evaluated</span> <span class = "edj-item degree">Weight</span>
+              <span className = "grade-item gradeTable">Component</span> <span class ="grade-item gradeTable">Learning Outcome(s) Evaluated</span> <span class = "grade-item gradeTable">Weight</span><span class = "grade-item gradeTable"> </span>
               </h4>
               </div>
             </div>

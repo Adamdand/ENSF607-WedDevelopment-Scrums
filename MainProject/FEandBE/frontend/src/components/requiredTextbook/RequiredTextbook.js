@@ -92,14 +92,14 @@ const httpLoc = '/api/requiredTextbooks';
      return newItems.map(item => (
        <table>
       <div className = "content-section container">
-         <div className="edj-row">
+         <div className="time-row">
          {/* <span className="edj-date date">{i++}</span>  */}
-         <span className="edj-item degree">{item.title}</span> 
-         <span className="edj-item degree">{item.author}</span> 
-          <span className="edj-item degree">{item.edition}</span>
-          <span className="edj-item degree">{item.publisher}</span>
+         <span className="time-item timeTable">{item.title}</span> 
+         <span className="time-item timeTable">{item.author}</span> 
+          <span className="time-item timeTable">{item.edition}</span>
+          <span className="time-item timeTable">{item.publisher}</span>
 
-          <span className="edj-item degree">
+          <span className="time-item timeTable">
            <button
              onClick={() => this.editItem(item)} className="btn btn-secondary mr-2">edit</button>
 
@@ -157,9 +157,9 @@ const httpLoc = '/api/requiredTextbooks';
              <div className="card p-4">
              <div className = "content-section container">
              {/* <div>{this.state.totalWeight}</div> */}
-         <div className="edj-row">
+         <div className="time-row">
            <h4>
-              <span className = "edj-item degree">Title</span> <span class ="edj-item degree">Author</span> <span class = "edj-item degree">Edition, Year</span> <span class = "edj-item degree">Publisher</span>
+              <span className = "time-item degree">Title</span> <span class ="time-item timeTable">Author</span> <span class = "time-item timeTable">Edition, Year</span> <span class = "time-item timeTable">Publisher</span><span class ="time-item timeTable"> </span>
               </h4>
               </div>
             </div>

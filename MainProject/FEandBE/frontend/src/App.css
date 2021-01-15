@@ -152,6 +152,22 @@
   margin-bottom: 1em;
 }
 
+.gradeTable {
+  color: #555;
+  font-weight: bold;
+  width: 24%;
+}
+
+.grade-item{
+  display: inline-block;
+}
+
+.grade-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
 /* Ivan's css */
 .calendarinfo {
   color: white;
