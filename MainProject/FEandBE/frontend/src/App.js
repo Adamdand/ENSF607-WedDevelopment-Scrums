@@ -10,6 +10,7 @@
  import RequiredTextbook from "./components/requiredTextbook/RequiredTextbook";
  import RecommendedTextbook from "./components/recommendedTextbook/RecommendedTextbook";
  import ReactPDFButton from "./components/reactPDF/reactPDFButton";
+ import SubmitButton from "./components/printPDF/SubmitButton"
 
  import Form from './components/calendarInfo/Form';
  import Exam from './components/examinations/Exam';
@@ -19,6 +20,7 @@
 
  import jsPDF from 'jspdf';
  import html2canvas from 'html2canvas';
+import submitButton from './components/printPDF/SubmitButton';
  
 
  
@@ -39,9 +41,11 @@
          <GradesTable></GradesTable>
          <RequiredTextbook></RequiredTextbook>
          <RecommendedTextbook></RecommendedTextbook>
+
+         <SubmitButton></SubmitButton>
          
-         <ReactPDFButton></ReactPDFButton>
-         <MyPdf></MyPdf>
+         {/* <ReactPDFButton></ReactPDFButton>
+         <MyPdf></MyPdf> */}
          
          
        </div>
