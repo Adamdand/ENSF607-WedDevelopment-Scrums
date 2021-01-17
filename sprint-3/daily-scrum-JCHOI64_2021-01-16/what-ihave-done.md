@@ -1,0 +1,1 @@
+implemented a print pdf button which will make an https request to update to the latest state and prints an object (for now)
