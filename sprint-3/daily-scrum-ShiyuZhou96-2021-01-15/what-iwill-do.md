@@ -1,0 +1,2 @@
+- clean up format
+- help to get the printing pdf working
