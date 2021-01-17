@@ -5,12 +5,13 @@ import axios from "axios";
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import styled, { css } from 'styled-components';
+import '../../PrintButton.css';
 
 class PrintThisComponent extends Component {
   render() {
     return (
-      <div>
-        <button className="btn btn-primary" onClick={() => window.print()}>PRINT</button>
+      <div class="centered" >
+        <button class="red button" onClick={() => window.print()}>PRINT</button>
         <p></p>
       </div>
     )

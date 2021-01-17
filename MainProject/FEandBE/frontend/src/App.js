@@ -42,11 +42,10 @@ import submitButton from './components/printPDF/SubmitButton';
          <RequiredTextbook></RequiredTextbook>
          <RecommendedTextbook></RecommendedTextbook>
 
-         <SubmitButton></SubmitButton>
+         {/*<SubmitButton></SubmitButton>*/}
          <MyPdf></MyPdf>
          
-         {/* <ReactPDFButton></ReactPDFButton>
-         <MyPdf></MyPdf> */}
+         {/* <ReactPDFButton></ReactPDFButton> */}
          
          
        </div>
